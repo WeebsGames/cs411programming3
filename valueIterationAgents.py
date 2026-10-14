@@ -62,7 +62,11 @@ class ValueIterationAgent(ValueEstimationAgent):
     def runValueIteration(self):
         # Write value iteration code here
         "*** YOUR CODE HERE ***"
+        start = self.mdp.getStartState()
+        for i in range(self.iterations):
+            max()
 
+        
 
     def getValue(self, state):
         """
