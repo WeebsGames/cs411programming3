@@ -65,9 +65,11 @@ class ValueIterationAgent(ValueEstimationAgent):
         currState = self.mdp.getStartState()
         self.values[currState] = 0
         for i in range(self.iterations):
-            for state in self.mdp.getTransitionStatesAndProbs(state):
-                
-            self.values[currState]
+            max = None
+            for state in self.mdp.getTransitionStatesAndProbs(currState):
+                if state[1] > max[1]:
+                    max = state
+            self.values[max[0]] = max[1]
 
         
 
